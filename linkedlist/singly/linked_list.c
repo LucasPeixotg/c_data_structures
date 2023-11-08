@@ -78,12 +78,41 @@ void pop(struct node** head_ref) {
     current->next = NULL;
 }
 
-
 /*
-Remove the node at the index
+Returns a copy of the list
 */
-void removeNode(struct node** head_ref, int index) {
-    
+struct node* copy_list(struct node** head_ref) {
+    struct node* copy = NULL;
+
+    if(head_ref == NULL) return copy;
+
+    struct node* current = *head_ref;
+    while(current != NULL) {
+        append(&copy, current->data);
+        current = current->next;
+    }
+
+    return copy;
+}
+
+int* to_array(struct node** head_ref) {
+    if(head_ref == NULL) return NULL;
+
+    struct node* current = *head_ref;
+    int size = 0;
+    while(current != NULL) {
+        size++;
+        current = current->next;
+    }
+
+    int* vector = malloc(size * sizeof(int));
+    current = *head_ref;
+    for(int i = 0; i < size; i++) {
+        vector[i] = current->data;
+        current = current->next;
+    }
+
+    return vector;
 }
 
 /*

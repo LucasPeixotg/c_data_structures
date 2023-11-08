@@ -26,6 +26,12 @@ Prints all elements of the list
 */
 void printList(struct node** head_ref);
 
+
+struct node* copy_list(struct node** head_ref);
+
+int* to_array(struct node** head_ref);
+
+
 // TODO:
 
 /*

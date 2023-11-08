@@ -20,6 +20,13 @@ int main(void) {
     printf("result  : ");
     printList(&head);
 
+    struct node* copy = copy_list(&head);
+    printf("\nCOPY:\n");
+    printf("expected: ");
+    printList(&head);
+    printf("result  : ");
+    printList(&copy);
+
     pop(&head);
     pop(&head);
     pop(&head);
@@ -28,4 +35,14 @@ int main(void) {
     printf("expected: 1->\n");
     printf("result  : ");
     printList(&head);
+
+    printf("\nCOPY:\n");
+    printf("expected: 1->99->2->3->88->\n");
+    printf("result  : ");
+    printList(&copy);
+    
+    printf("\nTO ARRAY:\n");
+    int* vector = to_array(&copy);
+    printf("expected: 1 99 2 3 88\n");
+    printf("result  : %d %d %d %d %d\n", vector[0], vector[1], vector[2], vector[3], vector[4]);
 }
