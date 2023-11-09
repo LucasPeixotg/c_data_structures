@@ -32,9 +32,4 @@ struct node* copy_list(struct node** head_ref);
 int* to_array(struct node** head_ref);
 
 
-// TODO:
-
-/*
-Remove the node at the index
-*/
-void removeNode(struct node** head_ref, int index);
+void destroy(struct node* head);

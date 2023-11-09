@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <malloc.h>
 #include "linked_list.h"
 
 int main(void) {
@@ -45,4 +46,8 @@ int main(void) {
     int* vector = to_array(&copy);
     printf("expected: 1 99 2 3 88\n");
     printf("result  : %d %d %d %d %d\n", vector[0], vector[1], vector[2], vector[3], vector[4]);
+
+    free(vector);
+    destroy(head);
+    destroy(copy);
 }

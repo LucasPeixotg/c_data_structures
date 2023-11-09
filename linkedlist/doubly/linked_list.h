@@ -26,9 +26,3 @@ Prints all elements of the list
 */
 void printList(struct node** head_ref);
 
-// TODO:
-
-/*
-Remove the node at the index
-*/
-void removeNode(struct node** head_ref, int index);

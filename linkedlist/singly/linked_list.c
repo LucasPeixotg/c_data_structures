@@ -127,3 +127,12 @@ void printList(struct node** head_ref) {
     }
     printf("\n");
 }
+
+void destroy(struct node* head) {
+    struct node* next;
+    while(head != NULL) {
+        next = head->next;
+        free(head);
+        head = next;
+    }
+}
