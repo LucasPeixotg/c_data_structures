@@ -1,4 +1,5 @@
-## A repository of data structures. Currently WIP.
+## A repository of data structures. 
+### (Currently W.I.P.)
 
 ### Done:
 - Different types of linked list
