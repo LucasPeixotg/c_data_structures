@@ -6,4 +6,4 @@
 
 ### To do:
 - Hash table
-- Trees
+- BST
