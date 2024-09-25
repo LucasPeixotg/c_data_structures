@@ -1,4 +1,4 @@
-## A repository of data structures. 
+## An academic data structures repository. 
 ### (Currently W.I.P.)
 
 ### Done:
