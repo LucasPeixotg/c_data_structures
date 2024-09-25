@@ -1,9 +1,18 @@
-## An academic data structures repository. 
-### (Currently W.I.P.)
+## An academic repository for studies in data structures. 
+> [!NOTE]
+> This repository of data structures examples was made for purely educational purposes by two professional idiots.
+<br>
 
-### Done:
-- Different types of linked list
+### W.I.P. status:
+  - **Basic data structure:**
+    - [ ] Arrays
+    - [ ] Dynamic Arrays
 
-### To do:
-- Hash table
-- BST
+  - **Linked lists:**
+    - [x] Singly linked list
+    - [x] Doubly linked list
+    - [ ] Circular linked list
+
+  - **Other types of data structure:**
+    - [ ] Hash table
+    - [ ] BST
