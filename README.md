@@ -4,7 +4,7 @@
 <br>
 
 ### W.I.P. status:
-  - **Basic data structure:**
+  - **Arrays:**
     - [ ] Arrays
     - [ ] Dynamic Arrays
 
