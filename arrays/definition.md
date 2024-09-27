@@ -1,6 +1,6 @@
-# Arrays and Dynamic Arrays:
-Arrays and dynamic arrays are the most basic form of data struture, they act as list to store a given number of basic informations together.
-You can see how they work and what are their differences right bellow:
+# What are arrays and dynamic arrays?
+&emsp; **Arrays and dynamic arrays are the most basic form of data struture, they are used to store basic informations together.** <br>
+&emsp; **You can see how they work and what are their differences right bellow:**
 <br>
 
 ## &emsp; Arrays:
