@@ -6,7 +6,7 @@
 ### W.I.P. status:
   - **Arrays:**
     - [ ] Arrays
-    - [ ] Dynamic Arrays
+    - [x] Dynamic Arrays
 
   - **Linked lists:**
     - [x] Singly linked list
