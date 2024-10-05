@@ -130,37 +130,3 @@ int add_offset_by_key(struct linked_list* header, int key, int offset) {
 
     return 0;
 }
-
-/**
- * @brief Removes all odd-valued nodes that are between even-valued nodes in the list.
- * 
- * @param header A pointer to the linked list.
- * 
- * @return The number of nodes removed from the list.
- */
-int remove_odds_between_evens(struct linked_list* header) {
-    struct node* current = header->head;
-    if(current->next == NULL && current->data % 2 == 1) {
-        free(current);
-        header->head = NULL;
-        return;
-    }
-
-    int odd_found = 0;
-    int event_found = 0;
-    while(current != NULL) {
-        if(current->next && current->next->data % 2 == 1) {
-            if(event_found) {
-                struct node* next = current->next->next;
-                free(current->next);
-                current->next = next;
-                odd_found = 1;
-                continue;
-            }
-        } else {
-            if(odd_found) break;
-            event_found = 1;
-        };
-        current = current->next;
-    }
-}

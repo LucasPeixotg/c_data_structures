@@ -6,18 +6,14 @@ int main(void) {
     list.head = NULL;
     list.size = 0;
 
-    push(&list, 51, 1);
-    push(&list, 51, 1);
-    push(&list, 51, 1);
-    push(&list, 2, 1);
-    push(&list, 51, 1);
-    push(&list, 51, 1);
-    push(&list, 51, 1);
+    push_back(&list, 14, 1);
+    push_back(&list, 51, 1);
+    push_back(&list, 18, 1);
+    push_back(&list, 2, 1);
+    push_back(&list, 51, 1);
+    push_back(&list, 51, 1);
+    push_back(&list, 12, 1);
 
     printf("\nLIST    : ");
-    print_list(&list);
-    remove_odds_between_even(&list);
-    printf("expected: [1] 51 -> [1] 51 -> [1] 51 -> [1] 2 -> \n");
-    printf("result  : ");
-    print_list(&list);    
+    print_list(&list); 
 }
