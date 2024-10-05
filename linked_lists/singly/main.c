@@ -6,41 +6,41 @@ int main(void) {
     struct node* head;
     head = NULL;
 
-    insert_beggining(&head, 2);
-    insert_beggining(&head, 1);
-    append(&head, 3);
+    linked_add(&head, 2);
+    linked_add(&head, 1);
+    linked_append(&head, 3);
     printf("PUSH:\n");
     printf("expected: 1->2->3->\n");
     printf("result  : ");
-    printList(&head);
+    linked_print(&head);
 
-    insert(&head, 1, 99);
-    insert(&head, 100, 88);
+    linked_insert(&head, 1, 99);
+    linked_insert(&head, 100, 88);
     printf("\nINSERT:\n");
     printf("expected: 1->99->2->3->88->\n");
     printf("result  : ");
-    printList(&head);
+    linked_print(&head);
 
     struct node* copy = copy_list(&head);
     printf("\nCOPY:\n");
     printf("expected: ");
-    printList(&head);
+    linked_print(&head);
     printf("result  : ");
-    printList(&copy);
+    linked_print(&copy);
 
-    pop(&head);
-    pop(&head);
-    pop(&head);
-    pop(&head);
+    linked_pop(&head);
+    linked_pop(&head);
+    linked_pop(&head);
+    linked_pop(&head);
     printf("\nPOP:\n");
     printf("expected: 1->\n");
     printf("result  : ");
-    printList(&head);
+    linked_print(&head);
 
     printf("\nCOPY:\n");
     printf("expected: 1->99->2->3->88->\n");
     printf("result  : ");
-    printList(&copy);
+    linked_print(&copy);
     
     printf("\nTO ARRAY:\n");
     int* vector = to_array(&copy);

@@ -1,15 +1,13 @@
+#include "linked_list.h"
 #include <malloc.h>
 
-struct node {
-    int data;
-    struct node* prev;
-    struct node* next;
-};
-
-/*
-Insert in the beggining of the list
-*/
-void insert_beggining(struct node** node_ref, int value) {
+/**
+ * @brief Inserts a new node with a given value at the beginning of the list.
+ * 
+ * @param head_ref A pointer to the head of the list.
+ * @param value The value to be inserted in the new node.
+ */
+void linked_add(struct node** node_ref, int value) {
     // Note, the reference passed can be a node at any given position of the list
     struct node* new = malloc(sizeof(struct node));
     new->data = value;
@@ -28,10 +26,13 @@ void insert_beggining(struct node** node_ref, int value) {
     current->prev = new;
 }
 
-/*
-Insert in the end of the list
-*/
-void append(struct node** node_ref, int value) {
+/**
+ * @brief Appends a new node with a given value at the end of the list.
+ * 
+ * @param head_ref A pointer to the head of the list.
+ * @param value The value to be inserted in the new node.
+ */
+void linked_append(struct node** node_ref, int value) {
     // Note, the reference passed can be a node at any given position of the list
     struct node* new = malloc(sizeof(struct node));
     new->data = value;
@@ -50,25 +51,27 @@ void append(struct node** node_ref, int value) {
     current->next = new;
 }
 
-/*
-Remove the last node of the list
-*/
-void pop(struct node** node_ref) {
+/**
+ * @brief Removes the first node from the list.
+ * 
+ * @param head_ref A pointer to the head of the list.
+ */
+void linked_pop(struct node** node_ref) {
     // Note, the reference passed can be a node at any given position of the list
     if(*node_ref == NULL) return;
 
-    struct node* current = *node_ref;
-    while(current->next != NULL) current = current->next;
-
-    if(current->prev != NULL) current->prev->next = NULL;
-    *node_ref = current->prev;
-    free(current);
+    struct node* temp = (*node_ref)->next;
+    free(*node_ref);
+    
+    *node_ref = temp;
 }
 
-/*
-Prints all elements of the list
-*/
-void printList(struct node** node_ref) {
+/**
+ * @brief Prints all the elements of the list.
+ * 
+ * @param head_ref A pointer to the head of the list.
+ */
+void linked_print(struct node** node_ref) {
     if(*node_ref == NULL) {
         printf("\n");
         return;
